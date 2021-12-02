@@ -1,29 +1,14 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 
-ADD_SUBDIRECTORY(googletest)
-
-
 SET(CMAKE_CXX_STANDARD 11)
 
+ADD_SUBDIRECTORY(googletest)
 
 ADD_EXECUTABLE(test
-        unit_test.cpp	
-	sub.hpp
-        op.hpp
-        add.hpp
-        mult.hpp
-	div.hpp
-	pow.hpp
+       unit_test.cpp
 )
-
 ADD_EXECUTABLE(calculator
-        main.cpp
-	sub.hpp
-        op.hpp
-        add.hpp
-        mult.hpp
-	div.hpp
-	pow.hpp
+	main.cpp
 )
 
 
