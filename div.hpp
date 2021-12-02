@@ -1,15 +1,16 @@
-#ifndef __DIV_HPP__
-#define __DIV_HPP__
+#ifndef _DIV_HPP_
+#define _DIV_HPP_
 
 #include "base.hpp"
 #include "op.hpp"
 
 using namespace std;
 
+
 struct DivideByZero : public std::exception {
-	const char* what() const throw() {
-		return "Divide By Zero Exception";
-	}
+        const char* what() const throw() {
+                return "Divide By Zero Exception";
+        }
 };
 
 class Div : public Base {
@@ -25,14 +26,13 @@ class Div : public Base {
 			if (r->evaluate() == 0) {
 				throw DivideByZero();
 			}
-
 			return l->evaluate() / r->evaluate();
 		}
 
 		virtual string stringify() {
-			return "(" + l->stringify() + " / " r->stringify() + ")";
+			return "(" + l->stringify() + " / " + r->stringify() + ")";
 		}
-
 };
+
 
 #endif
