@@ -1,5 +1,5 @@
-#ifndef __POW_HPP__
-#define __POW_HPP__
+#ifndef _POW_HPP
+#define _POW_HPP
 
 #include <math.h>
 
@@ -8,8 +8,8 @@
 using namespace std;
 
 class Pow : public Base {
-	public:
-		Pow(Op* left, Op* right) {
+	public: 
+		Pow(Base* left, Base* right) {
 			this->l = left;
 			this->r = right;
 		}
@@ -19,12 +19,14 @@ class Pow : public Base {
 		}
 
 		virtual string stringify() {
-			return ("(" + l->stringify() + " ** " + r->stringify() + ")");
-		
+			return ("(" + l->stringify() + " ** " + r->stringify() + ")" );
+		}
 
 	private:
-		Op* l;
-		Op* r; 
+		Base* l;
+		Base* r;
+
 };
 
 #endif
+

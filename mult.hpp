@@ -1,5 +1,5 @@
-#ifndef __MULT_HPP__
-#define __MULT_HPP__
+#ifndef _MULT_HPP_
+#define _MULT_HPP_
 
 #include "base.hpp"
 #include "op.hpp"
@@ -10,13 +10,11 @@ class Mult : public Base {
 	private:
 		Base* l;
 		Base* r;
-
-	public:
+	public: 
 		Mult(Base* left, Base* right) {
 			this->l = left;
 			this->r = right;
 		}
-
 		virtual double evaluate() {
 			return l->evaluate() * r->evaluate();
 		}
@@ -25,4 +23,8 @@ class Mult : public Base {
 			return "(" + l->stringify() + " * " + r->stringify() + ")";
 		}
 
+};
+
 #endif
+			
+			
